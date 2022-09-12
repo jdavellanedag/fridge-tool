@@ -1,6 +1,6 @@
 # Fridge Tool
 
-(Temporary name 😥) (Temporary Readme) (Temporary everithing 😭)
+(Temporary name 😥) (Temporary Readme) (Temporary everything 😭)
 
 ## Purpose
 
