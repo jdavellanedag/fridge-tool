@@ -1,0 +1,39 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  width: 80%;
+}
+
+.items-item {
+  display: flex;
+
+  & input {
+    box-shadow: 0 6px 10px 0 rgba(182, 182, 221, 0.1);
+    background-color: $white;
+    border-radius: 6px 6px;
+    width: 100%;
+  }
+}
+
+.items-result {
+  display: flex;
+  width: 100%;
+  background-color: $white;
+  border-radius: 6px 6px;
+  align-items: center;
+  padding-left: 1rem;
+
+  &-name {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  & button {
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 0 6px 6px 0;
+    height: 100%;
+  }
+}

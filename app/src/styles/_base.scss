@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background-color: $main;
+}
+
+main,
+.wrapper {
+  display: grid;
+  padding: 1em;
+}

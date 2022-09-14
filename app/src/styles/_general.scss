@@ -1,0 +1,56 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease-in;
+  font-size: 24px;
+
+  &--primary {
+    background-color: $tertiary;
+    color: $white;
+
+    &:hover {
+      background: darken($tertiary, 4%);
+    }
+  }
+}
+
+input {
+  border: none;
+  background: $white;
+  padding: 1rem;
+
+  &:focus {
+    outline: none;
+    background: lighten($tertiary, 30%);
+  }
+}
+
+.bg-1 {
+  background-color: $main;
+}
+
+.bg-2 {
+  background-color: $secondary;
+}
+
+.bg-3 {
+  background-color: $tertiary;
+}
+
+.icon {
+  width: 4rem;
+  & img {
+    max-width: 100%;
+  }
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
