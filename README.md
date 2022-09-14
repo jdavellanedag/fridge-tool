@@ -24,5 +24,5 @@ Practicing React and Java 😏
 1. Have a fridge
 2. Have a kitchen
 3. Add items to the portal
-4. Get the recipies
+4. Get the recipes
 5. Cook
