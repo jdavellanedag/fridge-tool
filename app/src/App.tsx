@@ -1,10 +1,13 @@
 import { Home } from "./pages/Home";
 import "./styles/styles.scss";
+import { AppProvider } from "./context/AppProvider";
 
 const App = () => {
   return (
     <>
-      <Home></Home>
+      <AppProvider>
+        <Home></Home>
+      </AppProvider>
     </>
   );
 };

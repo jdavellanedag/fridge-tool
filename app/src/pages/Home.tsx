@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import Tomato from "../assets/tomato.svg";
 import { Items } from "../components/items/Items";
+import { AppContext } from "../context/AppContext";
 
 export const Home = () => {
+  const { state } = useContext(AppContext);
+  const { ingredients } = state;
   return (
     <>
       <nav>
@@ -14,9 +18,13 @@ export const Home = () => {
         <div className="fridge">
           <h3 className="fridge-title">Items</h3>
           <div className="fridge-content">
-            <div className="fridge-item icon">
-              <img src={Tomato} alt="Tomato" />
-            </div>
+            {ingredients.map((ingredient) => {
+              return (
+                <div className="fridge-item icon" key={ingredient.id}>
+                  <img src={Tomato} alt={ingredient.name} />
+                </div>
+              );
+            })}
           </div>
           <button className="btn btn--primary">Generate</button>
         </div>

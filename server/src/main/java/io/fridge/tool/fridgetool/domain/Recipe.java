@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -15,20 +17,21 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Ingredient {
+public class Recipe {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   public Long id;
 
-  @Column(nullable = false)
-  public String name;
+  @Column
+  private String title;
 
   @Column
-  public String image;
+  private String description;
 
-  @ManyToMany(mappedBy = "ingredients")
+  @ManyToMany
+  @JoinTable(name = "recipe_ingredient", joinColumns = @JoinColumn(name = "recipe_id"), inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
   @JsonIgnore
-  Set<Recipe> recipes;
+  Set<Ingredient> ingredients;
 
 }
